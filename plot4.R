@@ -1,4 +1,4 @@
-dataFile <- "E:/R/datasciencecoursera/exdata_data_household_power_consumption/household_power_consumption.txt"
+dataFile <- "./exdata_data_household_power_consumption/household_power_consumption.txt"
 allData <- read.table(dataFile, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")
 
 #getting the subset for 1/2/2007 to 2/2/2007
@@ -20,7 +20,7 @@ subMeter3 <- as.numeric(subSetData$Sub_metering_3)
 voltage <- as.numeric(subSetData$Voltage)
 
 #plotting the 4 graphs in the 4(2 by 2) quadrants
-png("E:/R/datasciencecoursera/exdata_data_household_power_consumption/plot4.png", width=480, height=480)
+png("./exdata_data_household_power_consumption/plot4.png", width=480, height=480)
 
 par(mfrow = c(2, 2)) 
 
