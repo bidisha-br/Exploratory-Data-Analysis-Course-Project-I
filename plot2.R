@@ -1,4 +1,4 @@
-dataFile <- "E:/R/datasciencecoursera/exdata_data_household_power_consumption/household_power_consumption.txt"
+dataFile <- "./exdata_data_household_power_consumption/household_power_consumption.txt"
 allData <- read.table(dataFile, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")
 
 #getting the subset for 1/2/2007 to 2/2/2007
@@ -9,6 +9,6 @@ dateTime <- strptime(paste(subSetData$Date, subSetData$Time, sep=" "), "%d/%m/%Y
 
 #getting the Global Active Power in numeric form for plotting
 globalActivePower <- as.numeric(subSetData$Global_active_power)
-png("E:/R/datasciencecoursera/exdata_data_household_power_consumption/plot2.png", width=480, height=480)
+png("./exdata_data_household_power_consumption/plot2.png", width=480, height=480)
 plot(dateTime, globalActivePower, type="l", xlab="", ylab="Global Active Power (kilowatts)")
 dev.off()
